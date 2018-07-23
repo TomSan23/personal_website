@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/base.css">
+  {% block css %}{% endblock %}
+</head>
+<body>
+
+{% block navbar %}
+<nav id="navbar">
+  <div class="navbar-left">
+    <div class="navbar-header">
+      <a href="/" id="navbar-logo">TS</a>
+      <a id="navbar-toggle" href="#">&#9776;</a>
+    </div>
+    <a href="/about">About</a>
+    <a href="/resume">Resume</a>
+    <a href="/projects">Projects</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="navbar-right">
+    <a href="/about">GitHub</a>
+    <a href="/resume">LinkedIn</a>
+  </div>
+</nav>
+{% endblock %}
+
+{% block body %}{% endblock %}
+<script src="js/base.js"></script>
+{% block js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+}
+
+* + * {
+  margin-top: 4px;
+}
+
+html, body {
+  background-color: cadetblue;
+  margin-top: 0;
+}
+
+#navbar {
+  display: flex;
+  background: red;
+  justify-content: space-between;
+  height: 56px;
+}
+.navbar-left {
+  height: 100%;
+  display: inherit;
+  justify-content: flex-start;
+  flex: 1;
+  line-height: 56px;
+}
+.navbar-right {
+  height: 100%;
+  display: inherit;
+  justify-content: flex-end;
+  flex: 1;
+  line-height: 56px;
+}
+
+#navbar a {
+  width: 72px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  font-size: 16px;
+}
+
+#navbar > div > a:hover {
+  background-color: indianred;
+}
+
+#navbar > div > a:active {
+  background-color: darkred;
+}
+
+#navbar #navbar-logo {
+  font-size: 32px;
+}
+#navbar #navbar-toggle {
+  font-size: 32px;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-open > div > a {
+  display: inline !important;
+  /*TODO can prob fix this important with ordering*/
+}
+
+#navbar-toggle {
+  display: none;
+}
+
+#navbar * + * {
+  margin-top: 0;
+}
+
+@media (max-width: 576px) {
+  #navbar-toggle {
+    display: inline;
+  }
+
+  #navbar {
+    flex-direction: column;
+    height: fit-content;
+  }
+  #navbar > div {
+    flex-direction: column;
+  }
+
+  #navbar > div > a {
+    width: 100%;
+    display: none;
+  }
+
+}
+
+#avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.flex-vertical {
+  flex-direction: column;
+}
+
+.flex-full {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+
+li {
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+button > a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background: red;
+  /*padding: 8px;*/
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: yellow;
+}
+
+button:active {
+  background: darkred;
+}
+
+.flex-item-50 {
+  width: 50%;
+}
+
+.not-bold {
+  font-weight:normal
+}
+
+#resume .flex {
+  padding-left: 0;
+  padding-right: 0;
+  justify-content: space-between;
+}
+
+#resume {
+  width: 80%;
+  margin: 16px auto 32px;
+}
+
+#resume > h3 + ul {
+  margin-top: 16px;
+}
+
+#resume > h3 {
+  margin-top: 16px;
+}
+
+#resume > p + ul {
+  margin-top: 16px;
+}
+
+#resume > ul + div, ul + h4 {
+  margin-top: 16px;
+}
+
+#resume > h3 + h4, h3 + p, h3 + div {
+  margin-top: 16px;
+}
+
+#resume li {
+ line-height: 1;
+}
+
+
+.flex * + * {
+  margin-top: 0;
+}
+
+.flex-vertical > * + * {
+  margin-top: 4px;
+}
+
+.double-spaced {
+  line-height: 2;
+}
+
+.box {
+  background: white;
+  width: 80%;
+}
+
+.box > img {
+  width: 200px;
+  height: 200px;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+
+
+
+@media (max-width: 576px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex > button {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .flex > .flex-item-50 {
+    width: 100%;
+  }
+
+  .flex * + * {
+    margin-top: 4px;
+  }
+
+  #resume > .flex {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %}Tommy Santoyo{% endblock %}
+
+{% block body %}
+<div id="resume">
+  <h3>Qualifications</h3>
+
+  <p>A Software Engineer with four years of experience designing and implementing solutions for deployments, monitoring,
+    high availability, and failover of applications and websites using the technologies listed below.
+  <p>
+
+  <ul>
+    <li>Languages​: Python, Ruby, TypeScript (JavaScript), C#, SQL</li>
+    <li>AWS​: EC2, S3, RDS, IAM, Lambda, Route 53, VPC, Step Functions</li>
+    <li>Web​: HTML, CSS, JSON, NPM, Gulp, Browserify, SASS</li>
+    <li>Monitoring​: Icinga 1/2, Splunk, Graphite, Grafana, Elasticsearch, Consul, Prometheus</li>
+    <li>Software​: Chef/Puppet, Terraform, Vault, Nomad, Jenkins, Sqlite, Nginx</li>
+    <li>Operating​ Systems​: Linux (CentOS 6.x/7.x), Windows, OSX</li>
+    <li>Tools​: vim, Regex, Jira, git, Confluence, PyCharm, PyPI, Vagrant, GitLab, Service Now</li>
+  </ul>
+
+  <h3>Professional Experience</h3>
+
+  <h4>Balyasny Asset Management LLC Chicago, IL</h4>
+  <div class="flex">
+    <h4>Cloud Engineer</h4>
+    <h4>February 2018 – Present</h4>
+  </div>
+
+
+  <ul>
+    <li>Architected and implemented cloud solutions as part of a two person team, with focus on moving on-prem
+      infrastructure and apps to the cloud.
+    </li>
+    <li>Designed core infrastructure for AWS accounts including VPCs, Subnets, Security Groups, Route Tables, and NAT
+      Gateways.
+    </li>
+    <li>Designed Terraform modules for reuse in deploying common infrastructure to AWS.</li>
+    <li>Installed and configured Consul and Prometheus on hundreds of EC2 servers across multiple AWS accounts via
+      Puppet.
+    </li>
+    <li>Deployed and managed Vault, Nomad, Jira, Confluence, and GitLab via Puppet / Terraform.</li>
+  </ul>
+
+  <h4>Trading Technologies International, Inc. Chicago, IL</h4>
+  <div class="flex">
+    <h4>Monitoring Systems Engineer / Site Reliability Engineer</h4>
+    <h4>August 2015 – February 2018</h4>
+  </div>
+
+  <ul>
+    <li>Architected and implemented monitoring solutions as part of six person team for all servers deployed across the
+      company (DCs and AWS).
+    </li>
+    <li>Developed Chef cookbooks/recipes for Graphite, Splunk, and Icinga server side and client side deployments.</li>
+    <li>Architected Splunk, Graphite, and Icinga solutions across 7 data centers and 3 AWS regions, monitoring over 2000
+      production nodes.
+    </li>
+    <li>Deployed an internal PyPI server via Chef to AWS infrastructure (EC2 / RDS) allowing for the development of
+      internal Python packages.
+    </li>
+    <li>Developed a system to globally deploy Icinga 2 Python checks via PyPI without the need to run Chef, reducing
+      overall risk of code changes.
+    </li>
+    <li>Automated service and node discovery via Chef and Route 53 DNS for all monitoring systems.</li>
+    <li>Developed a Python/Flask app for consolidating Zookeeper, Chef, and application data to report overall status of
+      the platform (status.trade.tt).
+    </li>
+    <li>Developed Icinga checks in Python, and handlers for opening incidents in Jira.</li>
+    <li>Developed a Python service that wraps omping (multicast/unicast testing) for measuring inter-DC network
+      latency.
+    </li>
+    <li>Developed smoke tests for monitoring trading functionality in production scheduled via Icinga.</li>
+    <li>Responsible for hotfixes, deployment, and debugging of all monitoring software.</li>
+    <li>Proficient with git and generic VCS concepts.</li>
+    <li>Adhered to various product management methodologies including Agile, Waterfall, and Gitflow.</li>
+  </ul>
+
+  <div class="flex">
+    <h4>Test Engineer</h4>
+    <h4>February 2015 – August 2015</h4>
+  </div>
+
+  <ul>
+    <li>Responsible for manual integration and regression testing of the platform.</li>
+    <li>Developed various tests in Python, and maintained the internal Python test framework.</li>
+    <li>Performed conformance and integration testing of the CME and KCG markets.</li>
+  </ul>
+
+  <h4>Brindley Engineering Corporation Lisle, IL</h4>
+  <div class="flex">
+    <h4>Reliability Engineer / Engineering Technology Member</h4>
+    <h4>January 2014 – February 2015</h4>
+  </div>
+
+  <ul>
+    <li>Designed and developed an Excel based system to record engineer inspections for steel fireproofing.</li>
+    <li>Responsible for various IT activities including software development, SharePoint administration, and software
+      budgeting.
+    </li>
+    <li>Coordinated with clients and vendors to define scope and schedule for planned refinery unit shutdowns.</li>
+  </ul>
+
+  <h3>Personal Projects</h3>
+
+  <ul>
+    <li>A Flask and TypeScript app for developing engineering piping isometrics.</li>
+    <li>A SimCity like game written using the Unity Game Engine and C#.</li>
+    <li>Engineers without borders IIT chapter technical volunteer.</li>
+  </ul>
+
+  <h3>Education</h3>
+  <div class="flex">
+    <h4>Bachelor of Science in Mechanical Engineering</h4>
+    <h4>2013</h4>
+  </div>
+  <div class="flex">
+    <h4>University of Illinois at Chicago (UIC)</h4>
+    <h4>Chicago, IL</h4>
+  </div>
+</div>
+
+{% endblock %}

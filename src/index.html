@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Tommy Santoyo{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="css/index.css">
+{% endblock %}
+
+<!--override navbar for main page-->
+{% block navbar %}{% endblock %}
+
+{% block body %}
+<div class="flex flex-full flex-vertical">
+    <img src="images/profile.jpg" id="avatar">
+    <h1 id="name">Tommy Santoyo</h1>
+    <h4 id="skills">Cloud • DevOps • Monitoring</h4>
+    <div class="flex">
+      <button><a href="/about">About</a></button>
+      <button><a href="/resume">Resume</a></button>
+      <button><a href="/projects">Projects</a></button>
+      <button><a href="/contact">Contact</a></button>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script src="js/index.js"></script>
+{% endblock %}
