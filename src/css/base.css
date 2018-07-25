@@ -178,7 +178,8 @@ button:active {
   margin-top: 16px;
 }
 
-#resume > h3 {
+#resume > * + h3 {
+  padding-top: 16px;
   margin-top: 16px;
 }
 
@@ -196,6 +197,11 @@ button:active {
 
 #resume li {
  line-height: 1;
+}
+
+#resume * + h3 {
+  border-top: solid black;
+  border-width: 1px;
 }
 
 
