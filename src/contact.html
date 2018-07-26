@@ -2,11 +2,15 @@
 
 {% block title %}Tommy Santoyo{% endblock %}
 
+{% block css %}
+<link rel="stylesheet" href="css/contact.css">
+{% endblock %}
+
 {% block body %}
 <div class="flex flex-vertical">
-  <h1>Contact Me</h1>
-    <b>tommysantoyo@gmail.com</b>
-    <a href="/">GitHub</a>
-    <a href="/">LinkedIn</a>
+  <h1 class="flex-item-50">Contact Me</h1>
+  <p class="flex-item-50">tommysantoyo@gmail.com</p>
+  <a class="flex-item-50" href="https://www.linkedin.com/in/tommy-santoyo/">LinkedIn</a>
+  <a class="flex-item-50" href="https://github.com/TomSan23">Github</a>
 </div>
 {% endblock %}

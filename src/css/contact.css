@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+  border-bottom: solid black;
+  border-width: 1px;
+}
+
+p, a {
+  text-align: center;
+}
