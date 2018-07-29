@@ -1,8 +1,8 @@
 minifiy all the things
 use CDN or maybe GCP's s3 whatever it's called
-include local js packages if CDN isnt working
 package releases with different hashes for cache busting and also set expiry date
 html compressed delivery
-max css not so repetitive
+make css not so repetitive
 change titles
-robots.txt
+text preview on google
+uninstall unused gulp packages
