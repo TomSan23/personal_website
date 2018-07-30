@@ -1,30 +1,15 @@
 var gulp = require('gulp');
-//var source = require('vinyl-source-stream');
-//var rename = require('gulp-rename');
-//var browserify = require('browserify');
-//var es = require('event-stream');
-//var tsify = require('tsify');
-//var glob = require('glob');
 var del = require('del');
 var uglify = require('gulp-uglify');
-//var sourcemaps = require('gulp-sourcemaps');
-//var buffer = require('vinyl-buffer');
-//var sass = require('gulp-sass');
 var nunjucks = require('gulp-nunjucks');
 var watch = require('gulp-watch');
-var hash = require('gulp-hash');
-var references = require('gulp-hash-references');
-var log = require('fancy-log');
 var runSequence = require('run-sequence');
 var sitemap = require('gulp-sitemap');
 var rev = require('gulp-rev');
 var revReplace = require("gulp-rev-replace");
 var cleanCSS = require('gulp-clean-css');
 var imageMin = require('gulp-imagemin');
-var gulpMerge = require('gulp-merge');
 var merge = require('merge-stream');
-
-
 
 // Delete dist folder contents
 gulp.task('clean-dist', function () {
@@ -86,13 +71,7 @@ gulp.task('sitemap', function () {
 });
 
 gulp.task('default', function () {
-
-    // return watch(["src/**/*"], function () {
-    //   runSequence("clean-dist", "revision", "compile-html", "compile-js", "robots", "sitemap");
-    // });
-    runSequence("clean-dist", "revision", "compile-html", "compile-js", "robots", "sitemap");
-
+    return watch(["src/**/*"], function () {
+      runSequence("clean-dist", "revision", "compile-html", "compile-js", "robots", "sitemap");
+    });
 });
-
-
-

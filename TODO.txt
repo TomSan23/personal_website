@@ -1,4 +1,3 @@
-minifiy all the things
 use CDN or maybe GCP's s3 whatever it's called
 package releases with different hashes for cache busting and also set expiry date
 html compressed delivery

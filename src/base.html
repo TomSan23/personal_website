@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/base.css">
+  <title>{% block title %}{% endblock %}</title>
   {% block css %}{% endblock %}
 </head>
 <body>
-
 {% block navbar %}
 <nav id="navbar">
   <div class="navbar-left">
@@ -26,7 +26,6 @@
   </div>
 </nav>
 {% endblock %}
-
 {% block body %}{% endblock %}
 <script src="js/base.js"></script>
 {% block js %}{% endblock %}
