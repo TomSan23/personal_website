@@ -120,8 +120,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 2vw;
-  padding-left: 2vw;
+  padding-right: 8vw;
+  padding-left: 8vw;
 }
 
 li {

@@ -1,7 +1,8 @@
 use CDN or maybe GCP's s3 whatever it's called
-package releases with different hashes for cache busting and also set expiry date
 html compressed delivery
 make css not so repetitive
-change titles
-text preview on google
 uninstall unused gulp packages
+rename repo
+404 page
+touch events for mittens
+expiry data on html files not working, also set versioned to forever

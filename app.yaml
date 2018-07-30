@@ -1,0 +1,32 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+# TODO make this forever eventually since revisioned files will have a new name and html files never cache
+default_expiration: "1m"
+
+# ignore everything but the dist folder
+skip_files:
+- ^(?!dist).*$
+- ^\..*$  # dot files
+
+handlers:
+# revisioned files
+- url: /(.*\.(jpg|ico|js|css|txt|xml))$
+  static_files: dist/\1
+  upload: dist/(.*\.(jpg|ico|js|css|txt|xml))$
+  secure: always
+
+# html files should not be cached
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+  expiration: "0s"
+  secure: always
+
+- url: /(.*)$
+  static_files: dist/\1.html
+  upload: dist/(.*\.html)$
+  expiration: "0s"
+  secure: always
+  

@@ -19,9 +19,9 @@ gulp.task('clean-dist', function () {
 // Rev all static non-html files, and minify them
 gulp.task("revision", function () {
 
-   return merge(
-       gulp.src("src/css/*", {base: 'src'})
-           .pipe(cleanCSS()),
+    return merge(
+        gulp.src("src/css/*", {base: 'src'})
+            .pipe(cleanCSS()),
 
         gulp.src("src/js/*", {base: 'src'})
             .pipe(uglify({mangle: {toplevel: true}})),
@@ -65,13 +65,14 @@ gulp.task("robots", function () {
 gulp.task('sitemap', function () {
     gulp.src(['src/*.html', "!src/base.html"])
         .pipe(sitemap({
-            siteUrl: 'https://tommysantoyo.com'
+            siteUrl: 'https://tommysantoyo.com',
+            getLoc: function(siteUrl, loc, entry) { return loc.replace(/\.\w+$/, '')}
         }))
         .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('default', function () {
     return watch(["src/**/*"], function () {
-      runSequence("clean-dist", "revision", "compile-html", "compile-js", "robots", "sitemap");
+        runSequence("clean-dist", "revision", "compile-html", "compile-js", "robots", "sitemap");
     });
 });
